@@ -1,7 +1,7 @@
 const PATTERNS = {
   fullName: /^[a-zA-Zа-яА-ЯёЁ\s-]{2,}$/,
   group: /^[A-Z][1-4][1-5]\d{2}$/,
-  isuId: /^\d{6}$/,
+  isuId: /^[1-9]\d{5}$/,
   dormitory: /^([1-9]|1[0-9]|20)$/,
   room: /^[1-5]\d{2}$/,
   settlementDate: /^(\d{4})-(\d{2})-(\d{2})$/,
@@ -88,7 +88,7 @@ function validateStudent(input) {
   }
 
   if (!settlementDate) {
-    errors.settlementDate = "Введите дату заселения";
+    errors.settlementDate = "Введите существующую дату заселения";
   } else if (!isValidDate(settlementDate)) {
     errors.settlementDate = "Введите правильную дату заселения не позже 1999 года и не раньше следующего месяца";
   }

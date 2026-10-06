@@ -61,8 +61,7 @@ function renderProfile(student) {
     notesSection.hidden = true;
   }
 
-  document.title = student.fullName + " — Досье студента";
-  document.getElementById("profile-title").textContent = "Досье: " + student.fullName;
+  document.title = student.fullName + " — Профиль студента";
 
   const editUrl = "student-form.html?id=" + encodeURIComponent(student.isuId);
   document.getElementById("edit-btn").setAttribute("href", editUrl);

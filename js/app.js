@@ -137,7 +137,6 @@ function resetDeleteButton(button) {
 }
 
 function updateStats(students) {
-  document.getElementById("total-count").textContent = students.length;
   document.getElementById("dorm-count").textContent = 
     students.filter(s => s.dormitory).length;
   document.getElementById("foreign-count").textContent = 
